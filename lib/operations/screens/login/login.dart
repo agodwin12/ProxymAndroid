@@ -40,7 +40,7 @@ class _LoginState extends State<Login> {
       _isLoading = true;
     });
 
-    final String apiUrl = "http://10.0.2.2:5000/api/auth/login";
+    final String apiUrl = "http://57.128.178.119:8081/api/auth/login";
 
     try {
       final response = await http.post(

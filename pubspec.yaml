@@ -79,6 +79,8 @@ flutter:
     - assets/proxym.png
     - assets/splash.png
     - assets/bike_icon.png
+    - assets/motorcycle_icon.png
+    - assets/building_icon.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

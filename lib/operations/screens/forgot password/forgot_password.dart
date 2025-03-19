@@ -42,7 +42,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
 
     try {
       final response = await http.post(
-        Uri.parse('http://10.0.2.2:5000/api/forgot/forgot-password'),
+        Uri.parse('http://57.128.178.119:8081/api/forgot/forgot-password'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({'phone': _phoneController.text.trim()}),
       );
@@ -73,7 +73,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
 
     try {
       final response = await http.post(
-        Uri.parse('http://10.0.2.2:5000/api/forgot/verify-otp'),
+        Uri.parse('http://57.128.178.119:8081/api/forgot/verify-otp'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({
           'phone': _phoneController.text.trim(),
@@ -113,7 +113,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
 
     try {
       final response = await http.post(
-        Uri.parse('http://10.0.2.2:5000/api/forgot/reset-password'),
+        Uri.parse('http://57.128.178.119:8081/api/forgot/reset-password'),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({
           'phone': _phoneController.text.trim(),

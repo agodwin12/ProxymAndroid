@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         '/login':(context)=>Login(),
         '/forgot-password': (context) => const ForgotPasswordScreen(),
         '/equipements': (context) => MyEquipmentScreen(userId: '',),
-      //  '/detailsequip': (context) => EquipmentDetailsPage(bike: ''),
+      // '/detailsequip': (context) => EquipmentDetailsPage(bike: ''),
 
       },
     );

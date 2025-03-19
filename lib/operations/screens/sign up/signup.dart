@@ -103,7 +103,7 @@ class _RegistrationState extends State<Registration> {
 
     try {
       final response = await http.post(
-        Uri.parse('http://10.0.2.2:5000/auth/register'),
+        Uri.parse('http://57.128.178.119:8081/auth/register'),
         headers: {'Content-Type': 'application/json'},
         body: json.encode({
           'nom': _lastNameController.text,

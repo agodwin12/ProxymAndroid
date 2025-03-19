@@ -25,7 +25,7 @@ class _MyBikesScreenState extends State<MyBikesScreen> {
   int _cooldownSeconds = 0; // Track remaining cooldown time
 
   // API URL (Update with your backend IP or domain)
-  final String apiUrl = "http://10.0.2.2:5000/api/bike";
+  final String apiUrl = "http://57.128.178.119:8081/api/bike";
 
   @override
   void initState() {
@@ -42,7 +42,7 @@ class _MyBikesScreenState extends State<MyBikesScreen> {
   Future<void> fetchUserName() async {
     try {
       final response = await http.get(
-        Uri.parse("http://10.0.2.2:5000/api/user/${widget.userId}"),
+        Uri.parse("http://57.128.178.119:8081/api/user/${widget.userId}"),
       );
 
       if (response.statusCode == 200) {
@@ -224,7 +224,7 @@ class _MyBikesScreenState extends State<MyBikesScreen> {
       }
     });
 
-    final String apiUrl = "http://10.0.2.2:5000/api/gps-command";
+    final String apiUrl = "http://57.128.178.119:8081/api/gps-command";
 
     try {
       print("🔄 Sending command: $action for IMEI: ${bikes[0]['gps_imei']}");
@@ -342,7 +342,7 @@ class _MyBikesScreenState extends State<MyBikesScreen> {
     }
 
     final String gpsImei = bikes[0]['gps_imei'];
-    final String apiUrl = "http://10.0.2.2:5000/api/bike/location/$gpsImei";
+    final String apiUrl = "http://57.128.178.119:8081/api/bike/location/$gpsImei";
 
     print("🔍 Fetching location for GPS IMEI: $gpsImei");
 
@@ -426,7 +426,7 @@ class _MyBikesScreenState extends State<MyBikesScreen> {
     }
 
     final String gpsImei = bikes[0]['gps_imei'];
-    final String apiUrl = "http://10.0.2.2:5000/api/gps-status?macid=$gpsImei";
+    final String apiUrl = "http://57.128.178.119:8081/api/gps-status?macid=$gpsImei";
 
     print("🔍 Fetching bike status for IMEI: $gpsImei");
 
@@ -666,7 +666,7 @@ class _MyBikesScreenState extends State<MyBikesScreen> {
                   }
 
                   final String gpsImei = bikes[0]['gps_imei'];
-                  final String apiUrl = "http://10.0.2.2:5000/api/bike/location/$gpsImei";
+                  final String apiUrl = "http://57.128.178.119:8081/api/bike/location/$gpsImei";
 
                   print("🔍 Fetching location for GPS IMEI: $gpsImei");
 

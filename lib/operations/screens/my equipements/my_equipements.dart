@@ -34,7 +34,7 @@ class _MyEquipmentScreenState extends State<MyEquipmentScreen> {
 
     try {
       final String userId = widget.userId;
-      final String apiUrl = "http://10.0.2.2:5000/api/user/bike-battery/$userId";
+      final String apiUrl = "http://57.128.178.119:8081/api/user/bike-battery/$userId";
 
       print("🚀 Fetching bike details for userId: $userId");
       print("🔗 API URL: $apiUrl");

@@ -81,7 +81,7 @@ class _OtpState extends State<Otp> {
 
     try {
       final response = await http.post(
-        Uri.parse('http://10.0.2.2:5000/auth/resend-otp'),
+        Uri.parse('http://57.128.178.119:8081/auth/resend-otp'),
         headers: {'Content-Type': 'application/json'},
         body: json.encode({
           'phone': widget.phone,
@@ -123,7 +123,7 @@ class _OtpState extends State<Otp> {
     });
 
     try {
-      final url = Uri.parse('http://10.0.2.2:5000/auth/verify-otp');
+      final url = Uri.parse('http://57.128.178.119:8081/auth/verify-otp');
       final response = await http.post(
         url,
         headers: {"Content-Type": "application/json"},
