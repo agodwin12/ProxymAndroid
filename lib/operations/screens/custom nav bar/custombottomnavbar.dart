@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:proxymapp/operations/screens/bike%20details/my_bike.dart';
 import 'package:proxymapp/operations/screens/equipement%20details/equipement_details.dart';
+import 'package:proxymapp/operations/screens/stations/screens/map_screen.dart';
 import 'package:proxymapp/operations/screens/user%20profile/profilescreen.dart';
+
 
 class CustomBottomNavBar extends StatelessWidget {
   final int currentIndex;
@@ -53,6 +55,10 @@ class CustomBottomNavBar extends StatelessWidget {
                 label: 'Bike',
               ),
               BottomNavigationBarItem(
+                icon: Icon(Icons.ev_station),
+                label: 'Stations',
+              ),
+              BottomNavigationBarItem(
                 icon: Icon(Icons.account_circle_rounded),
                 label: 'Profile',
               ),
@@ -61,30 +67,32 @@ class CustomBottomNavBar extends StatelessWidget {
             onTap: (index) {
               if (index == currentIndex) return; // Don't navigate if already on this tab
 
-              // Navigate to the selected screen
               if (index == 0) {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => EquipmentDetailsPage( userId: userId, bike: null,)
+                    builder: (context) => EquipmentDetailsPage(userId: userId, bike: null),
                   ),
                 );
               } else if (index == 1) {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => MyBikesScreen(
-                      userId: userId,
-                    ),
+                    builder: (context) => MyBikesScreen(userId: userId),
                   ),
                 );
               } else if (index == 2) {
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => ProfileScreen(
-                      userId: userId,
-                    ),
+                    builder: (context) => StationsMapPage(userId: userId),
+                  ),
+                );
+              } else if (index == 3) {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ProfileScreen(userId: userId),
                   ),
                 );
               }

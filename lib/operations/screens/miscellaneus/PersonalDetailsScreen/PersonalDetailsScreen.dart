@@ -56,7 +56,7 @@ class _PersonalDetailsScreenState extends State<PersonalDetailsScreen> {
 
   Future<void> fetchUserData() async {
     try {
-      const String apiUrl = "http://57.128.178.119:8081/api/personal-info/";
+      const String apiUrl = "http://10.0.2.2:5000/api/personal-info/";
       final response = await http.get(Uri.parse("$apiUrl${widget.userId}"));
 
       if (response.statusCode == 200) {
@@ -86,7 +86,7 @@ class _PersonalDetailsScreenState extends State<PersonalDetailsScreen> {
       });
 
       try {
-        const String apiUrl = "http://57.128.178.119:8081/api/change-password";
+        const String apiUrl = "http://10.0.2.2:5000/api/change-password";
         final response = await http.post(
           Uri.parse(apiUrl),
           headers: {'Content-Type': 'application/json'},

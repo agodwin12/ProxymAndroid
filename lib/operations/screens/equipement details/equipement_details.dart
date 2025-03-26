@@ -51,7 +51,7 @@ class _EquipmentDetailsPageState extends State<EquipmentDetailsPage> with Single
 
   Future<void> _fetchBatteryDetails() async {
     try {
-      final String apiUrl = "http://57.128.178.119:8081/api/user/battery-details/${widget.userId}";
+      final String apiUrl = "http://10.0.2.2:5000/api/user/battery-details/${widget.userId}";
 
       print("🚀 Fetching battery details for userId: ${widget.userId}");
       print("🔗 API URL: $apiUrl");
@@ -95,7 +95,7 @@ class _EquipmentDetailsPageState extends State<EquipmentDetailsPage> with Single
   }
 
   Future<void> _sendDischargeCommand(bool enableDischarge) async {
-    final String apiUrl = "http://57.128.178.119:8081/api/battery/command/$macId";
+    final String apiUrl = "http://10.0.2.2:5000/api/battery/command/$macId";
 
     final String command = enableDischarge ? "discharge_on" : "discharge_off";
 

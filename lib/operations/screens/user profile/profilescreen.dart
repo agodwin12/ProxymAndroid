@@ -33,7 +33,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   Future<void> _fetchUserProfile() async {
     try {
-      final String apiUrl = "http://57.128.178.119:8081/api/user/${widget.userId}";
+      final String apiUrl = "http://10.0.2.2:5000/api/user/${widget.userId}";
 
       final response = await http.get(Uri.parse(apiUrl));
 
@@ -235,7 +235,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     // Optional: log the logout on the server side
     try {
       final response = await http.post(
-        Uri.parse('http://57.128.178.119:8081/api/logout'),
+        Uri.parse('http://10.0.2.2:5000/api/logout'),
         headers: {'Content-Type': 'application/json'},
         body: json.encode({'user_id': widget.userId}),
       );

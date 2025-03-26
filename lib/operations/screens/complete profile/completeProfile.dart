@@ -291,7 +291,7 @@ class _CompleteInformationState extends State<CompleteInformation> {
     try {
       var request = http.MultipartRequest(
         'POST',
-        Uri.parse('http://57.128.178.119:8081/auth/complete-profile'),
+        Uri.parse('http://10.0.2.2:5000/auth/complete-profile'),
       );
 
       request.fields['phone'] = widget.phone;
